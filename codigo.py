@@ -45,7 +45,10 @@ pyautogui.press('enter')
 import pandas # Para instalar: pip install pandas numpy openpyxl
 
 tabela = pandas.read_csv('produtos.csv')
+print(tabela)
 
 # Passo 4: Cadastrar 1 produto
+
+
 # Passo 5: Repetir o cadastro para todos os produtos
 
