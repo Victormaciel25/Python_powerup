@@ -48,25 +48,43 @@ import pandas # Para instalar: pip install pandas numpy openpyxl
 tabela = pandas.read_csv('produtos.csv')
 print(tabela)
 
-# Passo 4: Cadastrar 1 produto
-pyautogui.click(x=693, y=251)
+for linha in tabela.index:
 
-# Preencher os campos
-pyautogui.write('Código')
-pyautogui.press('tab')
-pyautogui.write('Marca')
-pyautogui.press('tab')
-pyautogui.write('Tipo')
-pyautogui.press('tab')
-pyautogui.write('Categoria')
-pyautogui.press('tab')
-pyautogui.write('Preco')
-pyautogui.press('tab')
-pyautogui.write('Custo')
-pyautogui.press('tab')
-pyautogui.write('OBS')
-pyautogui.press('tab')
-pyautogui.press('enter')
+    # Passo 4: Cadastrar 1 produto
+    pyautogui.click(x=693, y=251)
+
+    codigo = tabela.loc[linha, 'codigo']
+    marca = tabela.loc[linha, 'marca']
+    tipo = tabela.loc[linha, 'tipo']
+    categoria = tabela.loc[linha, 'categoria']
+    preco = tabela.loc[linha, 'preco_unitario']
+    custo = tabela.loc[linha, 'custo']
+    obs = tabela.loc[linha, 'obs']
+
+
+    # Preencher os campos
+    pyautogui.write (str(codigo))
+    pyautogui.press('tab')
+    pyautogui.write(marca)
+    pyautogui.press('tab')
+    pyautogui.write(tipo)
+    pyautogui.press('tab')
+    pyautogui.write(categoria)
+    pyautogui.press('tab')
+    pyautogui.write(preco)
+    pyautogui.press('tab')
+    pyautogui.write(custo)
+    pyautogui.press('tab')
+    pyautogui.write(obs)
+
+    # Apertar para enviar
+    pyautogui.press('tab')
+    pyautogui.press('enter')
+
+    # Scrollar pra cima
+    pyautogui.scroll(-600)
+    time.sleep(1)
+    pyautogui.scroll(600)
 
 # Passo 5: Repetir o cadastro para todos os produtos
 
