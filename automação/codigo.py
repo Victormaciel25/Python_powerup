@@ -75,16 +75,21 @@ for linha in tabela.index:
     pyautogui.press('tab')
     pyautogui.write(custo)
     pyautogui.press('tab')
-    pyautogui.write(obs)
+
+    if obs == 'nan':
+        pyautogui.write('')
+    else:
+        pyautogui.write(obs)
+
 
     # Apertar para enviar
     pyautogui.press('tab')
     pyautogui.press('enter')
 
     # Scrollar pra cima
-    pyautogui.scroll(-600)
+    pyautogui.scroll(-600000)
     time.sleep(1)
-    pyautogui.scroll(600)
+    pyautogui.scroll(600000)
 
 # Passo 5: Repetir o cadastro para todos os produtos
 
