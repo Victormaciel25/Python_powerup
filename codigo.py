@@ -16,6 +16,7 @@ import time
 pyautogui.PAUSE = 0.5
 
 # Abrir o chrome
+time.sleep(3)
 pyautogui.press('win')
 pyautogui.write('chrome')
 pyautogui.press('enter')
@@ -49,6 +50,23 @@ print(tabela)
 
 # Passo 4: Cadastrar 1 produto
 pyautogui.click(x=693, y=251)
+
+# Preencher os campos
+pyautogui.write('Código')
+pyautogui.press('tab')
+pyautogui.write('Marca')
+pyautogui.press('tab')
+pyautogui.write('Tipo')
+pyautogui.press('tab')
+pyautogui.write('Categoria')
+pyautogui.press('tab')
+pyautogui.write('Preco')
+pyautogui.press('tab')
+pyautogui.write('Custo')
+pyautogui.press('tab')
+pyautogui.write('OBS')
+pyautogui.press('tab')
+pyautogui.press('enter')
 
 # Passo 5: Repetir o cadastro para todos os produtos
 
