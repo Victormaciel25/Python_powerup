@@ -53,13 +53,13 @@ for linha in tabela.index:
     # Passo 4: Cadastrar 1 produto
     pyautogui.click(x=693, y=251)
 
-    codigo = tabela.loc[linha, 'codigo']
-    marca = tabela.loc[linha, 'marca']
-    tipo = tabela.loc[linha, 'tipo']
-    categoria = tabela.loc[linha, 'categoria']
-    preco = tabela.loc[linha, 'preco_unitario']
-    custo = tabela.loc[linha, 'custo']
-    obs = tabela.loc[linha, 'obs']
+    codigo = (str(tabela.loc [linha, 'codigo']))
+    marca = (str(tabela.loc [linha, 'marca']))
+    tipo = (str(tabela.loc [linha, 'tipo']))
+    categoria = (str(tabela.loc [linha, 'categoria']))
+    preco = (str(tabela.loc [linha, 'preco_unitario']))
+    custo = (str(tabela.loc [linha, 'custo']))
+    obs = (str(tabela.loc[linha, 'obs']))
 
 
     # Preencher os campos
