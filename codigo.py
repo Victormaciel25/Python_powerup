@@ -48,7 +48,7 @@ tabela = pandas.read_csv('produtos.csv')
 print(tabela)
 
 # Passo 4: Cadastrar 1 produto
-
+pyautogui.click(x=693, y=251)
 
 # Passo 5: Repetir o cadastro para todos os produtos
 
