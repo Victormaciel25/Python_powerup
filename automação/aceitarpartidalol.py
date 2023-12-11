@@ -17,7 +17,7 @@ time.sleep(4)
 pyautogui.click(x=849, y=835)
 
 imagem = Image.open("partida-encontrada.jpg")
-target_color = (31,39,44,255) 
+target_color = (31,39,44,255)
 pixel_color = imagem.getpixel((944, 731))
 
 if pixel_color == target_color:
